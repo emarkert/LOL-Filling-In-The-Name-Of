@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../LOL-Filling-In-The-Name-Of/app.js"></script>
-    <link rel="stylesheet" href="../LOL-Filling-In-The-Name-Of/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,15 +13,21 @@
         <h1>Filling In The Name Of</h1>
         <p>AND NOW YOU PLAY WHAT WE TOLD YA</p>
         <div class="role-select-wrapper">
-            <ul class="role-btn-list">
-                <li><input type="radio" name="top-select" id="top-select">TOP</li>
-                <li><input type="radio" name="jungle-select" id="jungle-select">JUNGLE</li>
-                <li><input type="radio" name="mid-select" id="mid-select">MID</li>
-                <li><input type="radio" name="adc-select" id="adc-select">ADC</li>
-                <li><input type="radio" name="support-select" id="support-select">SUPPORT</li>
-            </ul>
+            <form>
+                <input type="radio" id="top-role" name="top-role" value="TOP">
+                <label for="top-role">TOP</label>
+                <input type="radio" id="jungle-role" name="jungle-role" value="JUNGLE">
+                <label for="jungle-role">JUNGLE</label>
+                <input type="radio" id="mid-role" name="mid-role" value="MIDDLE">
+                <label for="mid-role">MID</label>
+                <input type="radio" id="adc-role" name="adc-role" value="ADC">
+                <label for="adc-role">ADC</label>
+                <input type="radio" id="support-role" name="support-role" value="SUPPORT">
+                <label for="support-role">SUPPORT</label>
+            </form>
         </div>
     </main>
     
+    <script src="../LOL-Filling-In-The-Name-Of/app.js"></script>
 </body>
 </html>
