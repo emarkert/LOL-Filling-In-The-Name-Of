@@ -16,7 +16,7 @@ const supportChamps = ["Ahri", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "B
     //else if adc is selected, use adcChamps array
     //else use supportChamps array
 
-    
+
     //get random index value from array
     const randomIndex = Math.floor(Math.random() * options.length);
 
@@ -24,4 +24,3 @@ const supportChamps = ["Ahri", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "B
     const selection = options[randomIndex];
     return selection;
 };
- }
