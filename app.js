@@ -8,4 +8,20 @@ const adcChamps = ["Akshan", "Anivia", "Aphelios", "Ashe", "Brand", "Caitlyn", "
 
 const supportChamps = ["Ahri", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "Bard", "Blitzcrank", "Brand", "Braum", "Cho'Gath", "Elise", "Fiddlesticks", "Galio", "Gragas", "Heimerdinger", "Ivern", "Janna", "Jarvan IV", "Kai'Sa", "Karma", "Karthus", "Kennen", "Lee Sin", "Leona", "Lissandra", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Miss Fortune", "Morgana", "Nami", "Nautilus", "Neeko", "Nidalee", "Orianna", "Pantheon", "Poppy", "Pyke", "Rakan", "Rell", "Renata Glasc", "Senna", "Seraphine", "Shaco", "Shen", "Sona", "Soraka", "Swain", "Tahm Kench", "Taliyah", "Taric", "Thresh", "Vel'Koz", "Xerath", "Yuumi", "Zilean", "Zyra"]
 
- 
+ function champSelect(role) {
+
+    //if top is selection, use topChamps array
+    //else if jg is selected, use jungleChamps array
+    //else if mid is selected, use midChamps array
+    //else if adc is selected, use adcChamps array
+    //else use supportChamps array
+
+    
+    //get random index value from array
+    const randomIndex = Math.floor(Math.random() * options.length);
+
+    //return random string from array
+    const selection = options[randomIndex];
+    return selection;
+};
+ }
