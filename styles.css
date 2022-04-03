@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -134,10 +137,51 @@ table {
     border-spacing: 0;
 }
 
-.role-btn {
-    padding: 12px 24px;
-    background: blue;
+/* ////////////// > START CUSTOM STYLING <  \\\\\\\\\\\\\\ */
+
+body {
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    border: none;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    width: 720px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0 0 2rem 0;
+
+}
+
+.subheading {
+    padding: 0 0 3rem 0;
+    font-size: 1.5rem;
+}
+
+.role-select-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.role-select-btn {
+     padding: .5rem 1.5rem;
+     border: none; 
+}
+
+.champ-select {
+    max-width: 720px;
+}
