@@ -8,71 +8,22 @@ const adcChamps = ["Akshan", "Anivia", "Aphelios", "Ashe", "Brand", "Caitlyn", "
 
 const supportChamps = ["Ahri", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "Bard", "Blitzcrank", "Brand", "Braum", "Cho'Gath", "Elise", "Fiddlesticks", "Galio", "Gragas", "Heimerdinger", "Ivern", "Janna", "Jarvan IV", "Kai'Sa", "Karma", "Karthus", "Kennen", "Lee Sin", "Leona", "Lissandra", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Miss Fortune", "Morgana", "Nami", "Nautilus", "Neeko", "Nidalee", "Orianna", "Pantheon", "Poppy", "Pyke", "Rakan", "Rell", "Renata Glasc", "Senna", "Seraphine", "Shaco", "Shen", "Sona", "Soraka", "Swain", "Tahm Kench", "Taliyah", "Taric", "Thresh", "Vel'Koz", "Xerath", "Yuumi", "Zilean", "Zyra"]
 
+
 let role = "";
 
-// function findRole() {
-    
-//     let roleTop = document.querySelector('#top');
-//     let roleJungle = document.querySelector('#jungle')
-//     let roleMid = document.querySelector('#mid')
-//     let roleADC = document.querySelector('#adc')
-//     let roleSupport = document.querySelector('#support')
-
-//     if (roleTop.checked) {
-//         role = 'Top'
-//     } else if (roleJungle.checked) {
-//         role = 'Jungle'
-//     } else if (roleMid.checked) {
-//         role = 'Mid'
-//     } else if (roleADC.checked) {
-//         role = 'ADC'
-//     } else if (roleSupport.checked) {
-//         role = 'Support'
-//     }
-// }
 
 const champReturn = document.querySelector('.champ-select')
-
-// function champSelect(role) {
-//     //findRole();
-
-//     if (role === 'Top') {
-//         const randomIndex = Math.floor(Math.random() * topChamps.length);
-//         const champSelection = topChamps[randomIndex];
-//         return champSelection;
-//     } else if (role === 'Jungle') {
-//         const randomIndex = Math.floor(Math.random() * jungleChamps.length);
-//         const champSelection = jungleChamps[randomIndex];
-//         return champSelection;
-//     } else if (role === 'Mid') {
-//         const randomIndex = Math.floor(Math.random() * midChamps.length);
-//         const champSelection = midChamps[randomIndex];
-//         return champSelection;
-//     } else if (role === 'ADC') {
-//         const randomIndex = Math.floor(Math.random() * adcChamps.length);
-//         const champSelection = adcChamps[randomIndex];
-//         return champSelection;
-//     } else if (role === 'Support') {
-//         const randomIndex = Math.floor(Math.random() * supportChamps.length);
-//         const champSelection = supportChamps[randomIndex];
-//         return champSelection;
-//     } else {
-//         champReturn.textContent = ""
-//     }
-// }
-
 const topBtn = document.querySelector('#topBtn')
 const jungleBtn = document.querySelector('#jungleBtn')
 const midBtn = document.querySelector('#midBtn')
 const adcBtn = document.querySelector('#adcBtn')
 const supportBtn = document.querySelector('#supportBtn')
 
+
 topBtn.addEventListener('click', () => {
-    
     const randomIndex = Math.floor(Math.random() * topChamps.length)
     const champSelection = topChamps[randomIndex]
     champReturn.textContent = champSelection
-
 })
 
 jungleBtn.addEventListener('click', () => {
