@@ -31,6 +31,8 @@ function findRole() {
     }
 }
 
+const champReturn = document.querySelector('.champ-select')
+
 function champSelect() {
     findRole();
 
@@ -54,10 +56,11 @@ function champSelect() {
         const randomIndex = Math.floor(Math.random() * supportChamps.length);
         const champSelection = supportChamps[randomIndex];
         return champSelection;
+    } else {
+        champReturn.textContent = ""
     }
 }
 
-const champReturn = document.querySelector('.champ-select')
 const topBtn = document.querySelector('#topBtn')
 const jungleBtn = document.querySelector('#jungleBtn')
 const midBtn = document.querySelector('#midBtn')
@@ -65,26 +68,23 @@ const adcBtn = document.querySelector('#adcBtn')
 const supportBtn = document.querySelector('#supportBtn')
 
 topBtn.addEventListener('click', () => {
-    champSelect();
     champReturn.textContent = champSelect();
 })
 
 jungleBtn.addEventListener('click', () => {
-    champSelect();
     champReturn.textContent = champSelect();
 })
-
+ 
 midBtn.addEventListener('click', () => {
-    champSelect();
     champReturn.textContent = champSelect();
 })
 
 adcBtn.addEventListener('click', () => {
-    champSelect();
     champReturn.textContent = champSelect();
 })
 
 supportBtn.addEventListener('click', () => {
-    champSelect();
     champReturn.textContent = champSelect();
 })
+
+
