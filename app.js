@@ -10,56 +10,56 @@ const supportChamps = ["Ahri", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "B
 
 let role = "";
 
-function findRole() {
+// function findRole() {
     
-    let roleTop = document.querySelector('#top');
-    let roleJungle = document.querySelector('#jungle')
-    let roleMid = document.querySelector('#mid')
-    let roleADC = document.querySelector('#adc')
-    let roleSupport = document.querySelector('#support')
+//     let roleTop = document.querySelector('#top');
+//     let roleJungle = document.querySelector('#jungle')
+//     let roleMid = document.querySelector('#mid')
+//     let roleADC = document.querySelector('#adc')
+//     let roleSupport = document.querySelector('#support')
 
-    if (roleTop.checked) {
-        role = 'Top'
-    } else if (roleJungle.checked) {
-        role = 'Jungle'
-    } else if (roleMid.checked) {
-        role = 'Mid'
-    } else if (roleADC.checked) {
-        role = 'ADC'
-    } else if (roleSupport.checked) {
-        role = 'Support'
-    }
-}
+//     if (roleTop.checked) {
+//         role = 'Top'
+//     } else if (roleJungle.checked) {
+//         role = 'Jungle'
+//     } else if (roleMid.checked) {
+//         role = 'Mid'
+//     } else if (roleADC.checked) {
+//         role = 'ADC'
+//     } else if (roleSupport.checked) {
+//         role = 'Support'
+//     }
+// }
 
 const champReturn = document.querySelector('.champ-select')
 
-function champSelect() {
-    findRole();
+// function champSelect(role) {
+//     //findRole();
 
-    if (role === 'Top') {
-        const randomIndex = Math.floor(Math.random() * topChamps.length);
-        const champSelection = topChamps[randomIndex];
-        return champSelection;
-    } else if (role === 'Jungle') {
-        const randomIndex = Math.floor(Math.random() * jungleChamps.length);
-        const champSelection = jungleChamps[randomIndex];
-        return champSelection;
-    } else if (role === 'Mid') {
-        const randomIndex = Math.floor(Math.random() * midChamps.length);
-        const champSelection = midChamps[randomIndex];
-        return champSelection;
-    } else if (role === 'ADC') {
-        const randomIndex = Math.floor(Math.random() * adcChamps.length);
-        const champSelection = adcChamps[randomIndex];
-        return champSelection;
-    } else if (role === 'Support') {
-        const randomIndex = Math.floor(Math.random() * supportChamps.length);
-        const champSelection = supportChamps[randomIndex];
-        return champSelection;
-    } else {
-        champReturn.textContent = ""
-    }
-}
+//     if (role === 'Top') {
+//         const randomIndex = Math.floor(Math.random() * topChamps.length);
+//         const champSelection = topChamps[randomIndex];
+//         return champSelection;
+//     } else if (role === 'Jungle') {
+//         const randomIndex = Math.floor(Math.random() * jungleChamps.length);
+//         const champSelection = jungleChamps[randomIndex];
+//         return champSelection;
+//     } else if (role === 'Mid') {
+//         const randomIndex = Math.floor(Math.random() * midChamps.length);
+//         const champSelection = midChamps[randomIndex];
+//         return champSelection;
+//     } else if (role === 'ADC') {
+//         const randomIndex = Math.floor(Math.random() * adcChamps.length);
+//         const champSelection = adcChamps[randomIndex];
+//         return champSelection;
+//     } else if (role === 'Support') {
+//         const randomIndex = Math.floor(Math.random() * supportChamps.length);
+//         const champSelection = supportChamps[randomIndex];
+//         return champSelection;
+//     } else {
+//         champReturn.textContent = ""
+//     }
+// }
 
 const topBtn = document.querySelector('#topBtn')
 const jungleBtn = document.querySelector('#jungleBtn')
@@ -68,23 +68,35 @@ const adcBtn = document.querySelector('#adcBtn')
 const supportBtn = document.querySelector('#supportBtn')
 
 topBtn.addEventListener('click', () => {
-    champReturn.textContent = champSelect();
+    
+    const randomIndex = Math.floor(Math.random() * topChamps.length)
+    const champSelection = topChamps[randomIndex]
+    champReturn.textContent = champSelection
+
 })
 
 jungleBtn.addEventListener('click', () => {
-    champReturn.textContent = champSelect();
+    const randomIndex = Math.floor(Math.random() * jungleChamps.length)
+    const champSelection = topChamps[randomIndex]
+    champReturn.textContent = champSelection
 })
  
 midBtn.addEventListener('click', () => {
-    champReturn.textContent = champSelect();
+    const randomIndex = Math.floor(Math.random() * midChamps.length)
+    const champSelection = topChamps[randomIndex]
+    champReturn.textContent = champSelection
 })
 
 adcBtn.addEventListener('click', () => {
-    champReturn.textContent = champSelect();
+    const randomIndex = Math.floor(Math.random() * adcChamps.length)
+    const champSelection = topChamps[randomIndex]
+    champReturn.textContent = champSelection
 })
 
 supportBtn.addEventListener('click', () => {
-    champReturn.textContent = champSelect();
+    const randomIndex = Math.floor(Math.random() * supportChamps.length)
+    const champSelection = topChamps[randomIndex]
+    champReturn.textContent = champSelection
 })
 
 
