@@ -77,25 +77,25 @@ topBtn.addEventListener('click', () => {
 
 jungleBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * jungleChamps.length)
-    const champSelection = topChamps[randomIndex]
+    const champSelection = jungleChamps[randomIndex]
     champReturn.textContent = champSelection
 })
  
 midBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * midChamps.length)
-    const champSelection = topChamps[randomIndex]
+    const champSelection = midChamps[randomIndex]
     champReturn.textContent = champSelection
 })
 
 adcBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * adcChamps.length)
-    const champSelection = topChamps[randomIndex]
+    const champSelection = adcChamps[randomIndex]
     champReturn.textContent = champSelection
 })
 
 supportBtn.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * supportChamps.length)
-    const champSelection = topChamps[randomIndex]
+    const champSelection = supportChamps[randomIndex]
     champReturn.textContent = champSelection
 })
 
