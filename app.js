@@ -49,17 +49,17 @@ const supportDice = document.getElementById('supportDice')
 
 topDice.onclick = () => diceRoll(e.target.value)
 jungleDice.onclick = () => diceRoll(e.target.value)
-midDice.onclicik = () => diceRoll(e.target.value)
-adcDice.onclicik = () => diceRoll(e.target.value)
-supportDice.onclicik = () => diceRoll(e.target.value)
+midDice.onclick = () => diceRoll(e.target.value)
+adcDice.onclick = () => diceRoll(e.target.value)
+supportDice.onclick = () => diceRoll(e.target.value)
 
 function diceRoll(lane) {
     getRandomChamp(lane)
 }
 
 function reset() {
-    let selectedRoles = DEFAULT_ROLES
-    let assignedChamps = DEFAULT_CHAMPS
+    selectedRoles = DEFAULT_ROLES
+    assignedChamps = DEFAULT_CHAMPS
     assignRoles();
 }
 
@@ -75,7 +75,6 @@ function getRandomChamp(lane) {
     let laneToArray = eval(lane)
     const randomIndex = Math.floor(Math.random() * laneToArray.length)
     const champSelection = laneToArray[randomIndex]
-    //if laneToArray = topChamps -> assignedChamps.top
     switch (laneToArray) {
         case topChamps:
             assignedChamps.top = champSelection
