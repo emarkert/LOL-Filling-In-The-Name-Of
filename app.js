@@ -53,11 +53,11 @@ const addBtnMid = document.getElementById('addBtnMid')
 const addBtnADC = document.getElementById('addBtnADC')
 const addBtnSupport = document.getElementById('addBtnSupport')
 
-addBtnTop.onclick = () => selectRole('topChamps')
-addBtnJungle.onclick = () => selectRole('jungleChamps')
-addBtnMid.onclick = () => selectRole('midChamps')
-addBtnADC.onclick = () => selectRole('adcChamps')
-addBtnSupport.onclick = () => selectRole('supportChamps')
+addBtnTop.onclick = () => selectRole(topChamps)
+addBtnJungle.onclick = () => selectRole(jungleChamps)
+addBtnMid.onclick = () => selectRole(midChamps)
+addBtnADC.onclick = () => selectRole(adcChamps)
+addBtnSupport.onclick = () => selectRole(supportChamps)
 
 function selectRole(value) {
     selectedRoles.push(value)
@@ -69,14 +69,33 @@ const midDice = document.getElementById('midDice')
 const adcDice = document.getElementById('adcDice')
 const supportDice = document.getElementById('supportDice')
 
-topDice.onclick = () => diceRoll(e.target.value)
-jungleDice.onclick = () => diceRoll(e.target.value)
-midDice.onclick = () => diceRoll(e.target.value)
-adcDice.onclick = () => diceRoll(e.target.value)
-supportDice.onclick = () => diceRoll(e.target.value)
+topDice.onclick = () => diceRoll(topChamps)
+jungleDice.onclick = () => diceRoll(jungleChamps)
+midDice.onclick = () => diceRoll(midChamps)
+adcDice.onclick = () => diceRoll(adcChamps)
+supportDice.onclick = () => diceRoll(supportChamps)
 
 function diceRoll(lane) {
     getRandomChamp(lane)
+    switch (lane) {
+        case topChamps:
+            topName.innerHTML = assignedChamps.top   
+            break;
+        case jungleChamps:
+            jungleName.innerHTML = assignedChamps.jungle
+            break;
+        case midChamps:
+            midName.innerHTML = assignedChamps.mid
+            break;
+        case adcChamps:
+            adcName.innerHTML = assignedChamps.adc
+            break;
+        case supportChamps:
+            supportName.innerHTML = assignedChamps.support
+            break;
+        default:
+            break;
+    }
 }
 
 function reset() {
@@ -86,18 +105,27 @@ function reset() {
 }
 
 const rollBtn = document.getElementById('rollBtn')
+const topName = document.getElementById('topName')
+const jungleName = document.getElementById('jungleName')
+const midName = document.getElementById('midName')
+const adcName = document.getElementById('adcName')
+const supportName = document.getElementById('supportName')
 
 rollBtn.onclick = () => assignRoles(selectedRoles)
 
 function assignRoles(roles) {
     roles.forEach(role => getRandomChamp(role))
+    topName.innerHTML = assignedChamps.top
+    jungleName.innerHTML = assignedChamps.jungle
+    midName.innerHTML = assignedChamps.mid
+    adcName.innerHTML = assignedChamps.adc
+    supportName.innerHTML = assignedChamps.support
 }
 
 function getRandomChamp(lane) {
-    let laneToArray = eval(lane)
-    const randomIndex = Math.floor(Math.random() * laneToArray.length)
-    const champSelection = laneToArray[randomIndex]
-    switch (laneToArray) {
+    const randomIndex = Math.floor(Math.random() * lane.length)
+    const champSelection = lane[randomIndex]
+    switch (lane) {
         case topChamps:
             assignedChamps.top = champSelection
             break;
