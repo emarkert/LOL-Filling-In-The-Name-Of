@@ -134,15 +134,28 @@ const midName = document.getElementById('midName')
 const adcName = document.getElementById('adcName')
 const supportName = document.getElementById('supportName')
 
+const addBtns = document.querySelectorAll('.add-lane-btn')
+
 rollBtn.onclick = () => assignRoles(selectedRoles)
 
-function assignRoles(roles) {
-    roles.forEach(role => getRandomChamp(role))
+function updateNames() {
     topName.innerHTML = assignedChamps.top
     jungleName.innerHTML = assignedChamps.jungle
     midName.innerHTML = assignedChamps.mid
     adcName.innerHTML = assignedChamps.adc
     supportName.innerHTML = assignedChamps.support
+}
+
+function assignRoles(roles) {
+    roles.forEach(role => getRandomChamp(role))
+    updateNames()
+    getPortraits()
+}
+
+function getPortraits() {
+    if (assignedChamps.top !== "") {
+        addBtnTop.classList.add('.hidden')
+    }
 }
 
 function getRandomChamp(lane) {
