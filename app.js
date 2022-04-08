@@ -9,45 +9,38 @@ const adcChamps = ["Akshan", "Anivia", "Aphelios", "Ashe", "Brand", "Caitlyn", "
 const supportChamps = ["Ahri", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "Bard", "Blitzcrank", "Brand", "Braum", "Cho'Gath", "Elise", "Fiddlesticks", "Galio", "Gragas", "Heimerdinger", "Ivern", "Janna", "Jarvan IV", "Kai'Sa", "Karma", "Karthus", "Kennen", "Lee Sin", "Leona", "Lissandra", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Miss Fortune", "Morgana", "Nami", "Nautilus", "Neeko", "Nidalee", "Orianna", "Pantheon", "Poppy", "Pyke", "Rakan", "Rell", "Renata Glasc", "Senna", "Seraphine", "Shaco", "Shen", "Sona", "Soraka", "Swain", "Tahm Kench", "Taliyah", "Taric", "Thresh", "Vel'Koz", "Xerath", "Yuumi", "Zilean", "Zyra"]
 
 
-let role = "";
+//select role(s) on role banner
+//click roll
+//checks which roles have been selected
+//retrieves random champ from arrays for each role passed
+//displays champ img + name in banner
+//option to roll the dice IN EACH banner AFTER champ has been assigned
+// ROLL btn changes to Again?
+//user clicks again -> banners reset -> defaults role selection
 
 
-const champReturn = document.querySelector('.champ-select')
-const topBtn = document.querySelector('#topBtn')
-const jungleBtn = document.querySelector('#jungleBtn')
-const midBtn = document.querySelector('#midBtn')
-const adcBtn = document.querySelector('#adcBtn')
-const supportBtn = document.querySelector('#supportBtn')
+let rollBtn = document.getElementById('rollBtn')
 
+function assignTop(newTop) {
+    currentTop = newTop
+}
 
-topBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * topChamps.length)
-    const champSelection = topChamps[randomIndex]
-    champReturn.textContent = champSelection
-})
+function assignJungle(newJungle) {
+    currentJungle = newJungle
+}
 
-jungleBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * jungleChamps.length)
-    const champSelection = jungleChamps[randomIndex]
-    champReturn.textContent = champSelection
-})
- 
-midBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * midChamps.length)
-    const champSelection = midChamps[randomIndex]
-    champReturn.textContent = champSelection
-})
+function assignMid(newMid) {
+    currentMid = newMid
+}
 
-adcBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * adcChamps.length)
-    const champSelection = adcChamps[randomIndex]
-    champReturn.textContent = champSelection
-})
+function assignADC(newADC) {
+    currentADC = newADC
+}
 
-supportBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * supportChamps.length)
-    const champSelection = supportChamps[randomIndex]
-    champReturn.textContent = champSelection
-})
+function assignSupport(newSupport) {
+    currentSupport = newSupport
+}
 
-
+function diceRoll(lane) {
+    
+}
