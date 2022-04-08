@@ -233,14 +233,15 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20%;
+    height: 10%;
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #07B0B5;
 }
 
 .banner-top-icon {
-    opacity: .45;
+    max-height: 40px;
+    aspect-ratio: 1;
 }
 
 .add-lane-btn {
