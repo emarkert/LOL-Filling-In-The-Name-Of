@@ -60,7 +60,7 @@ function diceRoll(lane) {
 function reset() {
     selectedRoles = DEFAULT_ROLES
     assignedChamps = DEFAULT_CHAMPS
-    assignRoles();
+    assignRoles(selectedRoles);
 }
 
 const rollBtn = document.getElementById('rollBtn')
