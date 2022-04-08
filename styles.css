@@ -171,16 +171,16 @@ button {
 }
 
 .role-banner {
-    border: 3px;
-    border-style: solid;
-    border-color: #07B0B5;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    min-height: 640px;
-    background: radial-gradient(#222D30, #0F171E);
+    background: radial-gradient(#0F171E, #222D30);
+    min-height: 680px;
+    border: 2px;
+    border-style: solid;
+    border-color: #07B0B5;
 }
 
 .menu-btns-wrapper {
@@ -210,10 +210,11 @@ button {
 }
 
 .add-lane-btn {
-    border-radius: 50%;
     aspect-ratio: 1;
-    height: 64px;
     margin: auto 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
 }
 
 .champPortrait {
