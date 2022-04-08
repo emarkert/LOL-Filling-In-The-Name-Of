@@ -9,38 +9,90 @@ const adcChamps = ["Akshan", "Anivia", "Aphelios", "Ashe", "Brand", "Caitlyn", "
 const supportChamps = ["Ahri", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "Bard", "Blitzcrank", "Brand", "Braum", "Cho'Gath", "Elise", "Fiddlesticks", "Galio", "Gragas", "Heimerdinger", "Ivern", "Janna", "Jarvan IV", "Kai'Sa", "Karma", "Karthus", "Kennen", "Lee Sin", "Leona", "Lissandra", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Miss Fortune", "Morgana", "Nami", "Nautilus", "Neeko", "Nidalee", "Orianna", "Pantheon", "Poppy", "Pyke", "Rakan", "Rell", "Renata Glasc", "Senna", "Seraphine", "Shaco", "Shen", "Sona", "Soraka", "Swain", "Tahm Kench", "Taliyah", "Taric", "Thresh", "Vel'Koz", "Xerath", "Yuumi", "Zilean", "Zyra"]
 
 
-//select role(s) on role banner
+//select role(s) on role banner by clicking '+' button center banner
+//add roles to selectedRoles array
 //click roll
-//checks which roles have been selected
-//retrieves random champ from arrays for each role passed
+//hides '+' circle
+//passes selectedRoles array to assignRoles(roles)
+//retrieves random champ from arrays for each role in array
 //displays champ img + name in banner
 //option to roll the dice IN EACH banner AFTER champ has been assigned
 // ROLL btn changes to Again?
 //user clicks again -> banners reset -> defaults role selection
+const DEFAULT_ROLES = []
+const DEFAULT_CHAMPS = {top: "", jungle: "", mid: "", adc: "", support: "",}
 
+let selectedRoles = []
+let assignedChamps = {top: "", jungle: "", mid: "", adc: "", support: "",}
 
-let rollBtn = document.getElementById('rollBtn')
+const addBtnTop = document.getElementById('addBtnTop')
+const addBtnJungle = document.getElementById('addBtnJungle')
+const addBtnMid = document.getElementById('addBtnMid')
+const addBtnADC = document.getElementById('addBtnADC')
+const addBtnSupport = document.getElementById('addBtnSupport')
 
-function assignTop(newTop) {
-    currentTop = newTop
+addBtnTop.onclick = () => selectRole('topChamps')
+addBtnJungle.onclick = () => selectRole('jungleChamps')
+addBtnMid.onclick = () => selectRole('midChamps')
+addBtnADC.onclick = () => selectRole('adcChamps')
+addBtnSupport.onclick = () => selectRole('supportChamps')
+
+function selectRole(value) {
+    selectedRoles.push(value)
 }
 
-function assignJungle(newJungle) {
-    currentJungle = newJungle
-}
+const topDice = document.getElementById('topDice')
+const jungleDice = document.getElementById('jungleDice')
+const midDice = document.getElementById('midDice')
+const adcDice = document.getElementById('adcDice')
+const supportDice = document.getElementById('supportDice')
 
-function assignMid(newMid) {
-    currentMid = newMid
-}
-
-function assignADC(newADC) {
-    currentADC = newADC
-}
-
-function assignSupport(newSupport) {
-    currentSupport = newSupport
-}
+topDice.onclick = () => diceRoll(e.target.value)
+jungleDice.onclick = () => diceRoll(e.target.value)
+midDice.onclicik = () => diceRoll(e.target.value)
+adcDice.onclicik = () => diceRoll(e.target.value)
+supportDice.onclicik = () => diceRoll(e.target.value)
 
 function diceRoll(lane) {
-    
+    getRandomChamp(lane)
+}
+
+function reset() {
+    let selectedRoles = DEFAULT_ROLES
+    let assignedChamps = DEFAULT_CHAMPS
+    assignRoles();
+}
+
+const rollBtn = document.getElementById('rollBtn')
+
+rollBtn.onclick = () => assignRoles(selectedRoles)
+
+function assignRoles(roles) {
+    roles.forEach(role => getRandomChamp(role))
+}
+
+function getRandomChamp(lane) {
+    let laneToArray = eval(lane)
+    const randomIndex = Math.floor(Math.random() * laneToArray.length)
+    const champSelection = laneToArray[randomIndex]
+    //if laneToArray = topChamps -> assignedChamps.top
+    switch (laneToArray) {
+        case topChamps:
+            assignedChamps.top = champSelection
+            break;
+        case jungleChamps:
+            assignedChamps.jungle = champSelection
+            break;
+        case midChamps:
+            assignedChamps.mid = champSelection
+            break;
+        case adcChamps:
+            assignedChamps.adc = champSelection
+            break;
+        case supportChamps:
+            assignedChamps.support = champSelection
+            break;
+        default: 
+            assignedChamps = DEFAULT_CHAMPS
+    }
 }
