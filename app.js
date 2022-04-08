@@ -53,6 +53,12 @@ const addBtnMid = document.getElementById('addBtnMid')
 const addBtnADC = document.getElementById('addBtnADC')
 const addBtnSupport = document.getElementById('addBtnSupport')
 
+const topAddImg = document.getElementById('topAddImg')
+const jungleAddImg = document.getElementById('jungleAddImg')
+const midAddImg = document.getElementById('midAddImg')
+const adcAddImg = document.getElementById('adcAddImg')
+const supportAddImg = document.getElementById('supportAddImg')
+
 addBtnTop.onclick = () => selectRole(topChamps)
 addBtnJungle.onclick = () => selectRole(jungleChamps)
 addBtnMid.onclick = () => selectRole(midChamps)
@@ -61,6 +67,23 @@ addBtnSupport.onclick = () => selectRole(supportChamps)
 
 function selectRole(value) {
     selectedRoles.push(value)
+    switch (value) {
+        case topChamps:
+            topAddImg.src = 'img/top icon.png'
+            break;
+        case jungleChamps:
+            jungleAddImg.src = 'img/jungle icon.png'
+            break;
+        case midChamps:
+            midAddImg.src = 'img/mid icon.png'
+            break;
+        case adcChamps:
+            adcAddImg.src = 'img/adc icon.png'
+            break;
+        case supportChamps:
+            supportAddImg.src = 'img/support icon.png'
+            break;
+    }
 }
 
 const topDice = document.getElementById('topDice')

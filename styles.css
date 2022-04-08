@@ -202,7 +202,10 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25%;
+    height: 20%;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #07B0B5;
 }
 
 .banner-top-icon {
