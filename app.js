@@ -102,15 +102,27 @@ function diceRoll(lane) {
             break;
         case jungleChamps:
             jungleName.innerHTML = assignedChamps.jungle
+            let newJungle = assignedChamps.jungle
+            let newJunglePath = `img/portraits/` + `${newJungle}` + `_0.jpg`
+            junglePortrait.src = newJunglePath
             break;
         case midChamps:
             midName.innerHTML = assignedChamps.mid
+            let newMid = assignedChamps.mid
+            let newMidPath = `img/portraits/` + `${newMid}` + `_0.jpg`
+            midPortrait.src = newMidPath
             break;
         case adcChamps:
             adcName.innerHTML = assignedChamps.adc
+            let newADC = assignedChamps.adc
+            let newADCPath = `img/portraits/` + `${newADC}` + `_0.jpg`
+            adcPortrait.src = newADCPath
             break;
         case supportChamps:
             supportName.innerHTML = assignedChamps.support
+            let newSupport = assignedChamps.support
+            let newSupportPath = `img/portraits/` + `${newSupport}` + `_0.jpg`
+            supportPortrait.src = newSupportPath
             break;
         default:
             break;
