@@ -286,3 +286,7 @@ button {
     background-color: transparent;
     border-style: none;
 }
+
+.hidden {
+    display: none;
+}

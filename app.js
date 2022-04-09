@@ -43,9 +43,13 @@ request.send();
 
 const DEFAULT_ROLES = []
 const DEFAULT_CHAMPS = {top: "", jungle: "", mid: "", adc: "", support: "",}
+const DEFAULT_PORTRAITS = {}
+
+let pathsArray = []
 
 let selectedRoles = DEFAULT_ROLES
 let assignedChamps = DEFAULT_CHAMPS
+let portraitObj = DEFAULT_PORTRAITS
 
 const addBtnTop = document.getElementById('addBtnTop')
 const addBtnJungle = document.getElementById('addBtnJungle')
@@ -149,13 +153,21 @@ function updateNames() {
 function assignRoles(roles) {
     roles.forEach(role => getRandomChamp(role))
     updateNames()
-    getPortraits()
+    getPortraits(assignedChamps)
 }
 
-function getPortraits() {
-    if (assignedChamps.top !== "") {
-        addBtnTop.classList.add('.hidden')
-    }
+function createImgSrc(champ) {
+    let imgPath = `img/portraits/` + `${champ}` + `_0`
+    pathsArray.push(imgPath)
+}
+
+function getPortraits(obj) {
+    let portraits = (Object.values(obj))
+    portraits.forEach(champ => {
+        createImgSrc(champ)
+        
+    });
+    console.log(pathsArray)
 }
 
 function getRandomChamp(lane) {
