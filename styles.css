@@ -198,7 +198,7 @@ button {
     align-content: center;
     width: 100%;
     padding-left: 6rem;
-    /* max-height: 640px; */
+
 }
 
 .role-banner {
@@ -206,12 +206,12 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* flex-grow: 1; */
     width: 100%;
     min-height: 720px;
     background-image: url('img/banner-body-active 2.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat, no-repeat;
+    background-position: top;
 }
 
 .menu-btns-wrapper {

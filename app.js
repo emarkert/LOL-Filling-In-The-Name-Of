@@ -138,6 +138,12 @@ const midName = document.getElementById('midName')
 const adcName = document.getElementById('adcName')
 const supportName = document.getElementById('supportName')
 
+const topPortrait = document.getElementById('topPortrait')
+const junglePortrait = document.getElementById('junglePortrait')
+const midPortrait = document.getElementById('midPortrait')
+const adcPortrait = document.getElementById('adcPortrait')
+const supportPortrait = document.getElementById('supportPortrait')
+
 const addBtns = document.querySelectorAll('.add-lane-btn')
 
 rollBtn.onclick = () => assignRoles(selectedRoles)
@@ -157,7 +163,7 @@ function assignRoles(roles) {
 }
 
 function createImgSrc(champ) {
-    let imgPath = `img/portraits/` + `${champ}` + `_0`
+    let imgPath = `img/portraits/` + `${champ}` + `_0.jpg`
     pathsArray.push(imgPath)
 }
 
@@ -165,9 +171,12 @@ function getPortraits(obj) {
     let portraits = (Object.values(obj))
     portraits.forEach(champ => {
         createImgSrc(champ)
-        
     });
-    console.log(pathsArray)
+    topPortrait.src = pathsArray[0]
+    junglePortrait.src = pathsArray[1]
+    midPortrait.src = pathsArray[2]
+    adcPortrait.src = pathsArray[3]
+    supportPortrait.src = pathsArray[4]
 }
 
 function getRandomChamp(lane) {
