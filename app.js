@@ -1,14 +1,3 @@
-//select role(s) on role banner by clicking '+' button center banner
-//add roles to selectedRoles array
-//click roll
-//hides '+' circle
-//passes selectedRoles array to assignRoles(roles)
-//retrieves random champ from arrays for each role in array
-//displays champ img + name in banner
-//option to roll the dice IN EACH banner AFTER champ has been assigned
-// ROLL btn changes to Again?
-//user clicks again -> banners reset -> defaults role selection
-
 let topChamps = []
 let jungleChamps = []
 let midChamps = []
@@ -106,7 +95,10 @@ function diceRoll(lane) {
     getRandomChamp(lane)
     switch (lane) {
         case topChamps:
-            topName.innerHTML = assignedChamps.top   
+            topName.innerHTML = assignedChamps.top
+            let newTop = assignedChamps.top
+            let newTopPath = `img/portraits/` + `${newTop}` + `_0.jpg`
+            topPortrait.src = newTopPath
             break;
         case jungleChamps:
             jungleName.innerHTML = assignedChamps.jungle
@@ -172,11 +164,20 @@ function getPortraits(obj) {
     portraits.forEach(champ => {
         createImgSrc(champ)
     });
+
     topPortrait.src = pathsArray[0]
     junglePortrait.src = pathsArray[1]
     midPortrait.src = pathsArray[2]
     adcPortrait.src = pathsArray[3]
     supportPortrait.src = pathsArray[4]
+
+    addBtnTop.classList.add('hidden')
+    addBtnJungle.classList.add('hidden')
+    addBtnMid.classList.add('hidden')
+    addBtnADC.classList.add('hidden')
+    addBtnSupport.classList.add('hidden')
+
+
 }
 
 function getRandomChamp(lane) {
