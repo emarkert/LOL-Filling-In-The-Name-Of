@@ -206,8 +206,9 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
-    min-height: 890px;
+    /* flex-grow: 1; */
+    width: 100%;
+    min-height: 720px;
     background-image: url('img/banner-body-active 2.png');
     background-size: cover;
     background-repeat: no-repeat, no-repeat;
