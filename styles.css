@@ -198,7 +198,7 @@ button {
     align-content: center;
     width: 100%;
     padding-left: 6rem;
-    max-height: 640px;
+    /* max-height: 640px; */
 }
 
 .role-banner {
@@ -207,11 +207,10 @@ button {
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    background: radial-gradient(#0F171E, #222D30);
-    min-height: 680px;
-    border: 2px;
-    border-style: solid;
-    border-color: #07B0B5;
+    min-height: 890px;
+    background-image: url('img/banner-body-active 2.png');
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .menu-btns-wrapper {
@@ -234,9 +233,9 @@ button {
     align-items: center;
     width: 100%;
     height: 10%;
-    border-bottom-width: 2px;
+    /* border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-bottom-color: #07B0B5;
+    border-bottom-color: #07B0B5; */
 }
 
 .banner-top-icon {
@@ -250,6 +249,7 @@ button {
     padding: 0;
     background-color: transparent;
     border: none;
+    max-height: 125px;
 }
 
 .champPortrait {
@@ -263,6 +263,7 @@ button {
     color: white;
     font-family: 'Friz Quadrata Regular';
     font-size: 1.5rem;
+    min-height: 1.5rem;
 }
 
 .dice-btn {
