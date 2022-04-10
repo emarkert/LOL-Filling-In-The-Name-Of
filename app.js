@@ -99,30 +99,35 @@ function diceRoll(lane) {
             let newTop = assignedChamps.top
             let newTopPath = `img/portraits/` + `${newTop}` + `_0.jpg`
             topPortrait.src = newTopPath
+            topPortrait.classList.remove('hidden')
             break;
         case jungleChamps:
             jungleName.innerHTML = assignedChamps.jungle
             let newJungle = assignedChamps.jungle
             let newJunglePath = `img/portraits/` + `${newJungle}` + `_0.jpg`
             junglePortrait.src = newJunglePath
+            junglePortrait.classList.remove('hidden')
             break;
         case midChamps:
             midName.innerHTML = assignedChamps.mid
             let newMid = assignedChamps.mid
             let newMidPath = `img/portraits/` + `${newMid}` + `_0.jpg`
             midPortrait.src = newMidPath
+            midPortrait.classList.remove('hidden')
             break;
         case adcChamps:
             adcName.innerHTML = assignedChamps.adc
             let newADC = assignedChamps.adc
             let newADCPath = `img/portraits/` + `${newADC}` + `_0.jpg`
             adcPortrait.src = newADCPath
+            adcPortrait.classList.remove('hidden')
             break;
         case supportChamps:
             supportName.innerHTML = assignedChamps.support
             let newSupport = assignedChamps.support
             let newSupportPath = `img/portraits/` + `${newSupport}` + `_0.jpg`
             supportPortrait.src = newSupportPath
+            supportPortrait.classList.remove('hidden')
             break;
         default:
             break;
@@ -150,7 +155,7 @@ const supportPortrait = document.getElementById('supportPortrait')
 
 const addBtns = document.querySelectorAll('.add-lane-btn')
 
-rollBtn.onclick = () => assignRoles(selectedRoles)
+// rollBtn.onclick = () => assignRoles(selectedRoles)
 
 function updateNames() {
     topName.innerHTML = assignedChamps.top

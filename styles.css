@@ -134,6 +134,7 @@ button {
     display: flex;
     padding: 6rem 0;
     max-width: 1440px;
+    margin: auto;
 }
 
 .role-banners-wrapper {
@@ -149,17 +150,16 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    max-width: 240px;
-    height: 642px;
+    width: 240px;
+    height: 720px;
     background: radial-gradient(#222D30, #0F171E);
+
 }
 
 .menu-btns-wrapper {
     display: flex;
     flex-direction: column;
     flex-shrink: 6;
-    padding-right: 6rem;
 }
 
 .menu-btn {
@@ -201,7 +201,7 @@ button {
 }
 
 .champ-name {
-    padding: 1rem 0 0 0;
+    padding: 1rem 0;
     color: white;
     font-family: 'Friz Quadrata Regular';
     font-size: 1.5rem;
@@ -214,7 +214,7 @@ button {
     background-color: transparent;
     border: none;
     padding: 0;
-    margin: auto 0 0 0;
+    margin: auto 0 2rem;
 }
 
 .roll-btn-wrapper {
