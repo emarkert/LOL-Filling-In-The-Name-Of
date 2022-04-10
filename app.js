@@ -91,6 +91,12 @@ midDice.onclick = () => diceRoll(midChamps)
 adcDice.onclick = () => diceRoll(adcChamps)
 supportDice.onclick = () => diceRoll(supportChamps)
 
+const topDiceImg = document.getElementById('topDiceImg')
+const jungleDiceImg = document.getElementById('jungleDiceImg')
+const midDiceImg = document.getElementById('midDiceImg')
+const adcDiceImg = document.getElementById('adcDiceImg')
+const supportDiceImg = document.getElementById('supportDiceImg')
+
 function diceRoll(lane) {
     getRandomChamp(lane)
     switch (lane) {
@@ -100,6 +106,7 @@ function diceRoll(lane) {
             let newTopPath = `img/portraits/` + `${newTop}` + `_0.jpg`
             topPortrait.src = newTopPath
             topPortrait.classList.remove('hidden')
+            topDiceImg.src = `img/reroll-button-active 1.png`
             break;
         case jungleChamps:
             jungleName.innerHTML = assignedChamps.jungle
@@ -107,6 +114,7 @@ function diceRoll(lane) {
             let newJunglePath = `img/portraits/` + `${newJungle}` + `_0.jpg`
             junglePortrait.src = newJunglePath
             junglePortrait.classList.remove('hidden')
+            jungleDiceImg.src = `img/reroll-button-active 1.png`
             break;
         case midChamps:
             midName.innerHTML = assignedChamps.mid
@@ -114,6 +122,7 @@ function diceRoll(lane) {
             let newMidPath = `img/portraits/` + `${newMid}` + `_0.jpg`
             midPortrait.src = newMidPath
             midPortrait.classList.remove('hidden')
+            midDiceImg.src = `img/reroll-button-active 1.png`
             break;
         case adcChamps:
             adcName.innerHTML = assignedChamps.adc
@@ -121,6 +130,7 @@ function diceRoll(lane) {
             let newADCPath = `img/portraits/` + `${newADC}` + `_0.jpg`
             adcPortrait.src = newADCPath
             adcPortrait.classList.remove('hidden')
+            adcDiceImg.src = `img/reroll-button-active 1.png`
             break;
         case supportChamps:
             supportName.innerHTML = assignedChamps.support
@@ -128,6 +138,7 @@ function diceRoll(lane) {
             let newSupportPath = `img/portraits/` + `${newSupport}` + `_0.jpg`
             supportPortrait.src = newSupportPath
             supportPortrait.classList.remove('hidden')
+            supportDiceImg.src = `img/reroll-button-active 1.png`
             break;
         default:
             break;
