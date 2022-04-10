@@ -215,6 +215,7 @@ button {
     border: none;
     padding: 0;
     margin: auto 0 1rem;
+    width: 64px;
 }
 
 .roll-btn-wrapper {
