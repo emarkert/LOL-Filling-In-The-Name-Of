@@ -32,39 +32,6 @@ request.onerror = function() {
 
 request.send();
 
-// const addBtnTop = document.getElementById('addBtnTop')
-// const addBtnJungle = document.getElementById('addBtnJungle')
-// const addBtnMid = document.getElementById('addBtnMid')
-// const addBtnADC = document.getElementById('addBtnADC')
-// const addBtnSupport = document.getElementById('addBtnSupport')
-
-// addBtnTop.onclick = () => selectRole(topChamps)
-// addBtnJungle.onclick = () => selectRole(jungleChamps)
-// addBtnMid.onclick = () => selectRole(midChamps)
-// addBtnADC.onclick = () => selectRole(adcChamps)
-// addBtnSupport.onclick = () => selectRole(supportChamps)
-
-// function selectRole(value) {
-//     selectedRoles.push(value)
-//     switch (value) {
-//         case topChamps:
-//             topAddImg.src = 'img/top icon.png'
-//             break;
-//         case jungleChamps:
-//             jungleAddImg.src = 'img/jungle icon.png'
-//             break;
-//         case midChamps:
-//             midAddImg.src = 'img/mid icon.png'
-//             break;
-//         case adcChamps:
-//             adcAddImg.src = 'img/adc icon.png'
-//             break;
-//         case supportChamps:
-//             supportAddImg.src = 'img/support icon.png'
-//             break;
-//     }
-// }
-
 function diceRoll(lane) {
     assignedChamps[lane] = getRandomChamp(lane);
     animateSelection(lane);
@@ -79,46 +46,6 @@ function reset() {
     selectedRoles = DEFAULT_ROLES
     assignedChamps = DEFAULT_CHAMPS
     assignRoles(selectedRoles);
-}
-
-const addBtns = document.querySelectorAll('.add-lane-btn')
-
-function updateNames() {
-    topName.innerHTML = assignedChamps.top
-    jungleName.innerHTML = assignedChamps.jungle
-    midName.innerHTML = assignedChamps.mid
-    adcName.innerHTML = assignedChamps.adc
-    supportName.innerHTML = assignedChamps.support
-}
-
-function assignRoles(roles) {
-    roles.forEach(role => getRandomChamp(role))
-    updateNames()
-    getPortraits(assignedChamps)
-}
-
-function createImgSrc(champ) {
-    let imgPath = `img/portraits/` + `${champ}` + `_0.jpg`
-    pathsArray.push(imgPath)
-}
-
-function getPortraits(obj) {
-    let portraits = (Object.values(obj))
-    portraits.forEach(champ => {
-        createImgSrc(champ)
-    });
-
-    topPortrait.src = pathsArray[0]
-    junglePortrait.src = pathsArray[1]
-    midPortrait.src = pathsArray[2]
-    adcPortrait.src = pathsArray[3]
-    supportPortrait.src = pathsArray[4]
-
-    addBtnTop.classList.add('hidden')
-    addBtnJungle.classList.add('hidden')
-    addBtnMid.classList.add('hidden')
-    addBtnADC.classList.add('hidden')
-    addBtnSupport.classList.add('hidden')
 }
 
 function getRandomChamp(lane) {
