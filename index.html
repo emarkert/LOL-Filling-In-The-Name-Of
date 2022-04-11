@@ -5,24 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>ALL RANDOM, ALL RIFT</title>
 </head>
 <body>
 
     <main>
-        <h1>FILLING IN THE NAME OF</h1>
-        <p class="subheading">...and now you play what we told ya</p>
-        <div class="role-select-wrapper">
-            <button id="topBtn" class="role-select-btn">TOP</button>
-            <button id="jungleBtn" class="role-select-btn">JUNGLE</button>
-            <button id="midBtn" class="role-select-btn">MID</button>
-            <button id="adcBtn" class="role-select-btn">ADC</button>
-            <button id="supportBtn" class="role-select-btn">SUPPORT</button>
+        <div class="main-ui-wrapper">
+            <div class="role-banners-wrapper" data-role="top">
+                <div class="role-banner">
+                    <div class="banner-top"><img src="img/role-icon-top.png" alt="" class="banner-top-icon"></div>
+                    <button id="addBtnTop" class="add-lane-btn hidden"><img class="add-lane-btn" id="topAddImg" src="img/add-icon.png" alt="add button for top lane"></button>
+                    <div class="champPortraitWrapper">
+                        <img id="topPortrait" src="#" alt="" class="champPortrait hidden">
+                    </div>
+                    <div id="topName" class="champ-name"></div>
+                    <button id="topDice" class="dice-btn" onClick="diceRoll('top')"><img id="topDiceImg" src="img/reroll-button 1.png" alt="" class="dice-icon"></button>
+                </div>
+                <div class="role-banner"  data-role="jungle">
+                    <div class="banner-top"><img src="img/role-icon-jungle.png" alt="" class="banner-top-icon"></div>
+                    <button id="addBtnJungle" class="add-lane-btn hidden"><img class="add-lane-btn" id="jungleAddImg" src="img/add-icon.png" alt="add button for jungle"></button>
+                    <div class="champPortraitWrapper">
+                        <img id="junglePortrait" src="" alt="" class="champPortrait hidden">
+                    </div>
+                    <div id="jungleName" class="champ-name"></div>
+                    <button id="jungleDice" class="dice-btn" onClick="diceRoll('jungle')"><img id="jungleDiceImg" src="img/reroll-button 1.png" alt="" class="dice-icon"></button>
+                </div>
+                <div class="role-banner"  data-role="mid">
+                    <div class="banner-top"><img src="img/role-icon-middle.png" alt="" class="banner-top-icon"></div>
+                    <button id="addBtnMid" class="add-lane-btn hidden"><img class="add-lane-btn" id="midAddImg" src="img/add-icon.png" alt="add button for mid lane"></button>
+                    <div class="champPortraitWrapper">
+                        <img id="midPortrait" src="" alt="" class="champPortrait hidden">
+                    </div>
+                    <div id="midName" class="champ-name"></div>
+                    <button id="midDice" class="dice-btn" onClick="diceRoll('mid')"><img id="midDiceImg" src="img/reroll-button 1.png" alt="" class="dice-icon"></button>
+                </div>
+                <div class="role-banner"  data-role="adc">
+                    <div class="banner-top"><img src="img/role-icon-bottom.png" alt="" class="banner-top-icon"></div>
+                    <button id="addBtnADC" class="add-lane-btn hidden"><img class="add-lane-btn" id="adcAddImg" src="img/add-icon.png" alt="add button for adc"></button>
+                    <div class="champPortraitWrapper">
+                        <img id="adcPortrait" src="" alt="" class="champPortrait hidden">
+                    </div>
+                    <div id="adcName" class="champ-name"></div>
+                    <button id="adcDice" class="dice-btn" onClick="diceRoll('adc')"><img id="adcDiceImg" src="img/reroll-button 1.png" alt="" class="dice-icon"></button>
+                </div>
+                <div class="role-banner"  data-role="support">
+                    <div class="banner-top"><img src="img/role-icon-support.png" alt="" class="banner-top-icon"></div>
+                    <button id="addBtnSupport" class="add-lane-btn hidden"><img class="add-lane-btn" id="supportAddImg" src="img/add-icon.png" alt="add button for support"></button>
+                    <div class="champPortraitWrapper">
+                        <img id="supportPortrait" src="" alt="" class="champPortrait hidden">
+                    </div>
+                    <div id="supportName" class="champ-name"></div>
+                    <button id="supportDice" class="dice-btn" onClick="diceRoll('support')"><img id="supportDiceImg" src="img/reroll-button 1.png" alt="" class="dice-icon"></button>
+                </div>
+            </div>
+            <div class="menu-btns-wrapper">
+                <button class="menu-btn"><img src="img/help-flag 1.png" alt="" class="help-icons"></button>
+                <button class="menu-btn"><img src="img/settings-flag 1.png" alt="" class="help-icons"></button>
+                <button class="menu-btn"><img src="img/refresh-flag 2.png" alt="" class="help-icons"></button>
+            </div>
         </div>
 
-        <div class="champ-select">
-
-        </div>
+        <!-- <div class="roll-btn-wrapper">
+            <button id="rollBtn" class="btn"><img src="img/roll-button.png" alt="" class="roll-btn-img"></button>
+        </div> -->
 
     </main>
     
