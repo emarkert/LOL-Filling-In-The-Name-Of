@@ -212,7 +212,7 @@ button {
     position: relative;
     display: block;
     border-bottom: 4px solid #8c6d34;
-    transition: 0.2s ease all;
+    transition: 0.4s ease all;
 }
 
 .champ-name {
@@ -221,7 +221,7 @@ button {
     font-family: 'Friz Quadrata Regular';
     font-size: 1.5rem;
     min-height: 1.5rem;
-    transition: 0.2s ease all;
+    transition: 0.4s ease all;
 }
 
 .dice-btn {
@@ -266,6 +266,6 @@ button {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(116deg, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.15) 51%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 80%);
+    background: linear-gradient(116deg, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.15) 30%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 80%);
     z-index: 999;
 }
