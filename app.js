@@ -32,38 +32,38 @@ request.onerror = function() {
 
 request.send();
 
-const addBtnTop = document.getElementById('addBtnTop')
-const addBtnJungle = document.getElementById('addBtnJungle')
-const addBtnMid = document.getElementById('addBtnMid')
-const addBtnADC = document.getElementById('addBtnADC')
-const addBtnSupport = document.getElementById('addBtnSupport')
+// const addBtnTop = document.getElementById('addBtnTop')
+// const addBtnJungle = document.getElementById('addBtnJungle')
+// const addBtnMid = document.getElementById('addBtnMid')
+// const addBtnADC = document.getElementById('addBtnADC')
+// const addBtnSupport = document.getElementById('addBtnSupport')
 
-addBtnTop.onclick = () => selectRole(topChamps)
-addBtnJungle.onclick = () => selectRole(jungleChamps)
-addBtnMid.onclick = () => selectRole(midChamps)
-addBtnADC.onclick = () => selectRole(adcChamps)
-addBtnSupport.onclick = () => selectRole(supportChamps)
+// addBtnTop.onclick = () => selectRole(topChamps)
+// addBtnJungle.onclick = () => selectRole(jungleChamps)
+// addBtnMid.onclick = () => selectRole(midChamps)
+// addBtnADC.onclick = () => selectRole(adcChamps)
+// addBtnSupport.onclick = () => selectRole(supportChamps)
 
-function selectRole(value) {
-    selectedRoles.push(value)
-    switch (value) {
-        case topChamps:
-            topAddImg.src = 'img/top icon.png'
-            break;
-        case jungleChamps:
-            jungleAddImg.src = 'img/jungle icon.png'
-            break;
-        case midChamps:
-            midAddImg.src = 'img/mid icon.png'
-            break;
-        case adcChamps:
-            adcAddImg.src = 'img/adc icon.png'
-            break;
-        case supportChamps:
-            supportAddImg.src = 'img/support icon.png'
-            break;
-    }
-}
+// function selectRole(value) {
+//     selectedRoles.push(value)
+//     switch (value) {
+//         case topChamps:
+//             topAddImg.src = 'img/top icon.png'
+//             break;
+//         case jungleChamps:
+//             jungleAddImg.src = 'img/jungle icon.png'
+//             break;
+//         case midChamps:
+//             midAddImg.src = 'img/mid icon.png'
+//             break;
+//         case adcChamps:
+//             adcAddImg.src = 'img/adc icon.png'
+//             break;
+//         case supportChamps:
+//             supportAddImg.src = 'img/support icon.png'
+//             break;
+//     }
+// }
 
 function diceRoll(lane) {
     assignedChamps[lane] = getRandomChamp(lane);
@@ -82,8 +82,6 @@ function reset() {
 }
 
 const addBtns = document.querySelectorAll('.add-lane-btn')
-
-// rollBtn.onclick = () => assignRoles(selectedRoles)
 
 function updateNames() {
     topName.innerHTML = assignedChamps.top
