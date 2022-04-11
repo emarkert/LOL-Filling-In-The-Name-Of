@@ -157,7 +157,7 @@ button {
     width: 240px;
     height: 720px;
     background: radial-gradient(#222D30, #0F171E);
-
+    box-shadow: 4px 4px 16px 8px rgba(34, 45, 48, .66), -4px -4px 16px 8px rgba(34, 45, 48, .33);
 }
 
 .menu-btns-wrapper {
