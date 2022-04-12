@@ -16,17 +16,14 @@ request.open('GET', 'champion.json', true);
 
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
-    // Success!
     champData = JSON.parse(request.responseText);
 
   } else {
-    // We reached our target server, but it returned an error
     console.log('There was an error retrieving champ data from local JSON file.')
   }
 };
 
 request.onerror = function() {
-  // There was a connection error of some sort
   console.log('There was a connection error.')
 };
 
